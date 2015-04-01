@@ -1,14 +1,23 @@
 <%= render "layouts/errors", :object => @message %>
 
 <%= form_for @message do |f| %>
-  <%= f.label :to %>
-  <%= f.text_field :to %>
 
-  <%= f.label :from %>
-  <%= f.text_field :from %>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.text_field :to, autofocus: true %>
+  </div>
 
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
 
-  <%= f.submit %>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send Message", class: "btn btn-info", id: "form-button" %>
+  </div>
 <% end %>

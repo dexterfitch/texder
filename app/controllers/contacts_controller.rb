@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       flash[:notice] = "Your contact was created!"
-      redirect_to root_path
+      redirect_to contacts_path
     else
       render 'new'
     end
@@ -40,6 +40,6 @@ class ContactsController < ApplicationController
 
 private
   def contact_params
-    params.require(:contact).permit(:name, :number)
+    params.require(:contact).permit(:name, :number).merge(:user_id => current_user.id)
   end
 end

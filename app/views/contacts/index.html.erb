@@ -10,7 +10,7 @@
       <h2>Contacts</h2>
       <hr>
       <% current_user.contacts.each do |contact| %>
-        <%= contact.name %> - <%= contact.number %>
+        <p><b><%= contact.name %>:</b> <%= contact.number %></p>
       <% end %>
     <% else %>
       <h2>Start adding contacts.</h2>
