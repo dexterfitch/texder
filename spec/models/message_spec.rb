@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe Message, :vcr => true do
+  it { should belong_to :user }
+
   it "doesn't save the message if Twilio gives an error" do
     message = Message.new(:body => 'hey', :to => '777', :from => '4439633339')
     expect(message.save).to be_falsey
