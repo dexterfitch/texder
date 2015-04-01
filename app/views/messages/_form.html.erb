@@ -4,12 +4,12 @@
 
   <div class="field">
     <%= f.label :to %><br>
-    <%= f.text_field :to, autofocus: true %>
+    <%= f.collection_select :to, Contact.all, :number, :name %>
   </div>
 
   <div class="field">
     <%= f.label :from %><br>
-    <%= f.text_field :from %>
+    <%= f.collection_select :from, Contact.all, :number, :name %>
   </div>
 
   <div class="field">
