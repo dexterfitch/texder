@@ -13,11 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'font-awesome-sass'
-gem 'kaminari'
 gem 'devise'
-gem 'textacular', '~> 3.0'
-gem 'simple_hashtag'
-gem 'paperclip', '~> 4.2'
 gem 'responders'
 gem 'rest-client'
 
