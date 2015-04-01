@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :contacts
+  has_many :messages
 
   validates :name, :presence => true
   validates :number, :presence => true

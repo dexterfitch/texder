@@ -1,23 +1,11 @@
-<h1>New Message</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h3>New Message</h3>
+  </div>
+</div>
 
-<% if @message.errors.any? %>
-  <h4>Oh shit!</h4>
-  <ul>
-    <% @message.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= form_for @message do |f| %>
-  <%= f.label :to %>
-  <%= f.text_field :to %>
-
-  <%= f.label :from %>
-  <%= f.text_field :from %>
-
-  <%= f.label :body %>
-  <%= f.text_field :body %>
-
-  <%= f.submit %>
-<% end %>
+<div class="row">
+  <div class="col-md-12">
+    <%= render "form" %>
+  </div>
+</div>
