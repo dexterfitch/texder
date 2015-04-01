@@ -1,0 +1,20 @@
+<div class="col-md-12">
+  <div class="row">
+    <%= link_to "Add Contact", new_contact_path, class: "btn btn-warning" %>
+    <hr>
+  </div>
+
+
+  <div class="row">
+    <% if current_user.contacts.any? %>
+      <h2>Contacts</h2>
+      <hr>
+      <% current_user.contacts.each do |contact| %>
+        <%= contact.name %> - <%= contact.number %>
+      <% end %>
+    <% else %>
+      <h2>Start adding contacts.</h2>
+    <% end %>
+    </div>
+  </div>
+</div>

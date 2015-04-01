@@ -2,6 +2,16 @@ li {
   padding-left: 2em;
 }
 
+.message_body {
+  padding-top: 1em;
+}
+
+.message_well {
+  border: 1px solid black;
+  border-radius: 45px;
+  margin: 1em;
+}
+
 #brand {
   font-weight: bold;
 }
